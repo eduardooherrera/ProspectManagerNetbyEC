@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ProspectManager.ViewModels"
+             x:Class="ProspectManager.Views.ActivitiesPage"
+             Title="ActivitiesPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout>
+                <CollectionView ItemsSource="{Binding Activities}"
+                            SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="10">
+                                <Border Stroke="Black"
+                                    StrokeThickness="2"
+                                    Padding="10"
+                                    Margin="5">
+                                    <StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Descripción:" FontAttributes="Bold" FontSize="18" Margin="0,0,10,0" />
+                                            <Label Text="{Binding Description}" FontAttributes="Bold" FontSize="18" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Tipo:" FontAttributes="Bold" FontSize="14" Margin="0,0,10,0" />
+                                            <Label Text="{Binding Type}" FontSize="14" TextColor="Black" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Fecha:" FontAttributes="Bold" FontSize="14" Margin="0,0,10,0" />
+                                            <Label Text="{Binding Date, StringFormat='{0:dd/MM/yyyy}'}" FontSize="14" TextColor="Black" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Calificación:" FontAttributes="Bold" FontSize="14" Margin="0,0,10,0" />
+                                            <Label Text="{Binding Rating}" FontSize="14" TextColor="Black" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" Padding="20" FlowDirection="RightToLeft">
+                                            <Button Text="Editar" BackgroundColor="Yellow" TextColor="Black" 
+                                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.EditActivityCommand}" 
+                                                    CommandParameter="{Binding .}"   />
+                                            <StackLayout Padding="5"></StackLayout>
+                                            <Button Text="Eliminar" BackgroundColor="IndianRed" Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.DeleteActivityCommand}" 
+                                                    CommandParameter="{Binding .}"  />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Border>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <StackLayout Orientation="Vertical" Padding="20">
+                    <Button Text="Agregar Actividad" BackgroundColor="Green"  Command="{Binding AddActivityCommand}" />
+                    <StackLayout Padding="5"></StackLayout>
+                    <Button Text="Regresar" Command="{Binding GoBackCommand}" />
+                </StackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

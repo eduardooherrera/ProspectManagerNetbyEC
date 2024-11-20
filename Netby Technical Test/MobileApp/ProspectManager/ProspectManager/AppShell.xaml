@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ProspectManager.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ProspectManager.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="ProspectManager">
+
+    <ShellContent Title="Prospects" Route="ProspectsPage" ContentTemplate="{DataTemplate local:ProspectsPage}" >
+        <ShellContent Title="Activities" Route="ActivitiesPage" ContentTemplate="{DataTemplate local:ActivitiesPage}" >
+            <ShellContent Title="ActivitiesForm" Route="ActivityFormPage" ContentTemplate="{DataTemplate local:ActivityFormPage}" />
+        </ShellContent>
+    </ShellContent>
+
+</Shell>

@@ -1,0 +1,6 @@
+@ProspectManagerAPI_HostAddress = http://localhost:5090
+
+GET {{ProspectManagerAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProspectManager", "ProspectManager\ProspectManager.csproj", "{F068060B-59E4-4924-A54E-DB49803DDFAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F068060B-59E4-4924-A54E-DB49803DDFAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F068060B-59E4-4924-A54E-DB49803DDFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F068060B-59E4-4924-A54E-DB49803DDFAA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F068060B-59E4-4924-A54E-DB49803DDFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F068060B-59E4-4924-A54E-DB49803DDFAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F068060B-59E4-4924-A54E-DB49803DDFAA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB5D1F2F-DB9F-4582-8901-0C3BE1AA7A6D}
+	EndGlobalSection
+EndGlobal

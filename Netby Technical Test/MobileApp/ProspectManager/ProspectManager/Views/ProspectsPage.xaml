@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ProspectManager.ViewModels"
+             x:Class="ProspectManager.Views.ProspectsPage"
+             Title="ProspectsPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Bienvenido a la lista de prospectos" HorizontalOptions="Center" VerticalOptions="Center" />
+                <CollectionView ItemsSource="{Binding Prospects}"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedProspect, Mode=TwoWay}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Border Stroke="Black"
+                                    StrokeThickness="2"
+                                    Padding="10"
+                                    Margin="5">
+                                    <StackLayout Padding="10">
+                                        <StackLayout Padding="0">
+                                            <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="18" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" Padding="10">
+                                            <Label Text="{Binding Email}" FontSize="14" TextColor="Black" />
+                                            <Label Text=" - " FontSize="14" TextColor="Black" />
+                                            <Label Text="{Binding CellPhoneNumber}" FontSize="14" TextColor="Black" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Border>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
